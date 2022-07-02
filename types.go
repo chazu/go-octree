@@ -18,10 +18,16 @@ type Vec3 struct {
 	Z float64
 }
 
+type Vec3Bool struct {
+	X bool
+	Y bool
+	Z bool
+}
+
 type Octree struct {
 	Root          bool
 	Origin        Vec3
-	children      [8]Octree
+	children      [8]*Octree
 	halfDimension Vec3
 	points        []Entity
 	breakpoint    int
